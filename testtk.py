@@ -2,6 +2,9 @@
 # -*- coding: UTF-8 -*-
 
 from tkinter import *  # 导入 Tkinter 库
+import tkinter
+
+
 
 root = Tk()  # 创建窗口对象的背景色
 # 创建两个列表
@@ -17,4 +20,17 @@ for item in movie:  # 第二个小部件插入数据
 
 listb.pack()  # 将小部件放置到主窗口中
 listb2.pack()
+
+var=StringVar()
+def show():
+    var.set('abc')
+
+
+b=Button(root,text='this is my button',command=show)
+
+l=Label(root,textvariable=var)
+l.pack()
+
+b.pack()
+
 root.mainloop()  # 进入消息循环
