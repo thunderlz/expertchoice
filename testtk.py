@@ -23,7 +23,7 @@ listb2.pack()
 
 var=StringVar()
 def show():
-    var.set('abc')
+    var.set(listb.get(listb.curselection()))
 
 
 b=Button(root,text='this is my button',command=show)
