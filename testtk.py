@@ -2,7 +2,7 @@
 # -*- coding: UTF-8 -*-
 
 from tkinter import *  # 导入 Tkinter 库
-import tkinter
+import tkinter as tk
 
 
 
@@ -25,8 +25,10 @@ var=StringVar()
 def show():
     var.set(listb.get(listb.curselection()))
 
+def msgbox():
+    print(tk.messagebox.askquesqion(title='mybox',message='hahaha'))
 
-b=Button(root,text='this is my button',command=show)
+b=Button(root,text='this is my button',command=msgbox)
 
 l=Label(root,textvariable=var)
 l.pack()
